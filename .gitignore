@@ -1,0 +1,12 @@
+.idea
+*.sln.iml
+_ReSharper*
+
+.vs
+
+packages
+
+[Bb]in
+[Oo]bj
+
+*.user
