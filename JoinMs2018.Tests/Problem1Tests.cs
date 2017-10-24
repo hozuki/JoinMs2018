@@ -10,7 +10,7 @@ namespace JoinMs.Tests {
             var str = "aabbbccccdddddeeeeee";
             var toDelete = 4;
             var r = Problem1.DeleteCharacters(str, toDelete);
-            Assert.True(r == 4);
+            Assert.Equal(4, r);
         }
 
         // 测试：一个都不删。
@@ -20,7 +20,7 @@ namespace JoinMs.Tests {
             var str = "abcdef";
             var toDelete = 0;
             var r = Problem1.DeleteCharacters(str, toDelete);
-            Assert.True(r == 6);
+            Assert.Equal(6, r);
         }
 
         // 测试：删除数刚好为字符串长度。
@@ -30,7 +30,7 @@ namespace JoinMs.Tests {
             var str = "abccddeeff";
             var toDelete = 10;
             var r = Problem1.DeleteCharacters(str, toDelete);
-            Assert.True(r == 0);
+            Assert.Equal(0, r);
         }
 
         // 测试：常规测试的变种，不过有多个相同字符。
@@ -40,7 +40,7 @@ namespace JoinMs.Tests {
             var str = "abcdefgg";
             var toDelete = 2;
             var r = Problem1.DeleteCharacters(str, toDelete);
-            Assert.True(r == 5);
+            Assert.Equal(5, r);
         }
 
         // 测试：空字符串，并要求删除字符。
@@ -50,7 +50,7 @@ namespace JoinMs.Tests {
             var str = "";
             var toDelete = 1;
             var r = Problem1.DeleteCharacters(str, toDelete);
-            Assert.True(r == 0);
+            Assert.Equal(0, r);
         }
 
         // 测试：空字符串，但不要求删除字符。
@@ -60,7 +60,7 @@ namespace JoinMs.Tests {
             var str = "";
             var toDelete = 0;
             var r = Problem1.DeleteCharacters(str, toDelete);
-            Assert.True(r == 0);
+            Assert.Equal(0, r);
         }
 
     }

@@ -11,7 +11,7 @@ namespace JoinMs.Tests {
         public void Input1() {
             var root = ParseTree("*N");
             var r = Problem4.MinCoverSet(root);
-            Assert.True(r == 1);
+            Assert.Equal(1, r);
         }
 
         // 测试：带有一个子节点的根节点。
@@ -20,7 +20,7 @@ namespace JoinMs.Tests {
         public void Input2() {
             var root = ParseTree("*N(N)");
             var r = Problem4.MinCoverSet(root);
-            Assert.True(r == 1);
+            Assert.Equal(1, r);
         }
 
         // 测试：带有两个子节点的根节点。
@@ -29,7 +29,7 @@ namespace JoinMs.Tests {
         public void Input3() {
             var root = ParseTree("*N(N)(N)");
             var r = Problem4.MinCoverSet(root);
-            Assert.True(r == 1);
+            Assert.Equal(1, r);
         }
 
         // 原题的测试树。
@@ -39,7 +39,7 @@ namespace JoinMs.Tests {
             // original example
             var root = ParseTree("*N(*N(N,N),N)(N)");
             var r = Problem4.MinCoverSet(root);
-            Assert.True(r == 2);
+            Assert.Equal(2, r);
         }
 
         // 测试：对上个测试用例的树的扩展。
@@ -48,7 +48,7 @@ namespace JoinMs.Tests {
         public void Input5() {
             var root = ParseTree("*N(*N(N,N),*N(N,N,N))(N)(N)(N)");
             var r = Problem4.MinCoverSet(root);
-            Assert.True(r == 3);
+            Assert.Equal(3, r);
         }
 
         // 测试：根节点下的所有子节点都是关键节点，从而不应被选中。
@@ -57,7 +57,7 @@ namespace JoinMs.Tests {
         public void Input6() {
             var root = ParseTree("N(*N(N,N),*N(N,N,N))(*N(N,N,N,N))(*N(N,N))(*N(N))");
             var r = Problem4.MinCoverSet(root);
-            Assert.True(r == 5);
+            Assert.Equal(5, r);
         }
 
         // 测试：
@@ -65,7 +65,7 @@ namespace JoinMs.Tests {
         public void Input7() {
             var root = ParseTree("*N(N(*N(N(*N(N)(N))(*N))(N))(*N))(N)");
             var r = Problem4.MinCoverSet(root);
-            Assert.True(r == 5);
+            Assert.Equal(5, r);
         }
 
         // Format example: N(N(N,N,N),N)

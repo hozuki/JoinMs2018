@@ -16,7 +16,7 @@ namespace JoinMs.Tests {
                 {3, 9}
             };
             var r = Problem2.CandyGiver(studentCount, pairs);
-            Assert.True(r == 2);
+            Assert.Equal(2, r);
         }
 
         // 测试：冷漠的幼儿园。
@@ -26,7 +26,7 @@ namespace JoinMs.Tests {
             var studentCount = 10;
             var pairs = new int[,] { };
             var r = Problem2.CandyGiver(studentCount, pairs);
-            Assert.True(r == 0);
+            Assert.Equal(0, r);
         }
 
         // 测试：带有局部环的图。
@@ -40,7 +40,7 @@ namespace JoinMs.Tests {
                 {1, 2}
             };
             var r = Problem2.CandyGiver(studentCount, pairs);
-            Assert.True(r == 9);
+            Assert.Equal(9, r);
         }
 
         // 测试：仅有环的图。
@@ -53,7 +53,7 @@ namespace JoinMs.Tests {
                 {1, 3}
             };
             var r = Problem2.CandyGiver(studentCount, pairs);
-            Assert.True(r == 3);
+            Assert.Equal(3, r);
         }
 
         // 测试：只有一条边的图。
@@ -65,7 +65,7 @@ namespace JoinMs.Tests {
                 {1, 2}
             };
             var r = Problem2.CandyGiver(studentCount, pairs);
-            Assert.True(r == 1);
+            Assert.Equal(1, r);
         }
 
     }

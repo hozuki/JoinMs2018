@@ -11,7 +11,7 @@ namespace JoinMs.Tests {
                 2, 3, 4, 9
             };
             var r = Problem3.AllVouchers(billList);
-            Assert.True(r == 11);
+            Assert.Equal(11, r);
         }
 
         // 测试：只有一个顾客。
@@ -22,7 +22,7 @@ namespace JoinMs.Tests {
                 1
             };
             var r = Problem3.AllVouchers(billList);
-            Assert.True(r == 0);
+            Assert.Equal(0, r);
         }
 
         // 测试：所有金额相等。
@@ -33,7 +33,7 @@ namespace JoinMs.Tests {
                 3, 3, 3, 3, 3
             };
             var r = Problem3.AllVouchers(billList);
-            Assert.True(r == 0);
+            Assert.Equal(0, r);
         }
 
         // 测试：每步都有礼券产生。
@@ -44,7 +44,7 @@ namespace JoinMs.Tests {
                 1, 2, 3, 5
             };
             var r = Problem3.AllVouchers(billList);
-            Assert.True(r == 7);
+            Assert.Equal(7, r);
         }
 
     }
