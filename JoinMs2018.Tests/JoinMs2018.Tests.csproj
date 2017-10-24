@@ -46,6 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interview1Tests.cs" />
+    <Compile Include="Interview2Tests.cs" />
     <Compile Include="Problem1Tests.cs" />
     <Compile Include="Problem2Tests.cs" />
     <Compile Include="Problem3Tests.cs" />
